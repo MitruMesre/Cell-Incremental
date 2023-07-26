@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cell Incremental</title>
+</head>
+
+<body style="background-color: #333; color: whitesmoke">
+    <h1><span id="atp-count">0</span> ATP</h1>
+    <p>+<span id="atp-per-second">0</span>/s</p>
+    <button onclick="gainATP()">Synthesize <span id="atp-per-click">1</span> ATP</button>
+    <hr>
+    <h2>Generators</h2>
+    <table>
+        <tr>
+            <td>Photosynthesis: <span id="photosynthesis-count">0</span></td>
+            <td>Cellular Respiration: <span id="respiration-count">0</span></td>
+            <td>Phagocytosis: <span id="phagocytosis-count">0</span></td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="buyPhotosynthesis()">
+                    Photosynthesis: <span id="photosynthesis-cost">10</span> ATP
+                    <br>
+                    +<span id="photosynthesis-atp-per-second">1</span> ATP per Second
+                </button>
+            </td>
+            <td>
+                <button onclick="buyRespiration()">
+                    Cellular Respiration: <span id="respiration-cost">100</span> ATP
+                    <br>
+                    +<span id="respiration-atp-per-second">10</span> ATP per Second
+                </button>
+            </td>
+            <td>
+                <button onclick="buyPhagocytosis()">
+                    Phagocytosis: <span id="phagocytosis-cost">1000</span> ATP
+                    <br>
+                    +<span id="phagocytosis-atp-per-second">100</span> ATP per Second
+                </button>
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <h2>Upgrades</h2>
+    <table>
+        <tr>
+            <td>Cytoskeleton: <span id="cytoskeleton-count">0</span></td>
+            <td>Enzyme: <span id="enzyme-count">0</span></td>
+            <td>Organelle: <span id="organelle-count">0</span></td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="upgradeCytoskeleton()">
+                    Cytoskeleton: <span id="cytoskeleton-cost">100</span> ATP
+                    <br>
+                    10x ATP from Clicking
+                </button>
+            </td>
+            <td>
+                <button onclick="upgradeEnzyme()">
+                    Enzyme: <span id="enzyme-cost">1000</span> ATP
+                    <br>
+                    Doubled ATP from Generators
+                </button>
+            </td>
+            <td>
+                <button onclick="upgradeOrganelle()">
+                    Organelle: <span id="organelle-cost">10000</span> ATP
+                    <br>
+                    Doubled ATP from all sources
+                </button>
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <p id="goal">Goal: Reach 100,000 ATP.</p>
+    <script src="script.js"></script>
+</body>
+
+</html>
